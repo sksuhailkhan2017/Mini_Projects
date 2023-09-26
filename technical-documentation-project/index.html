@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Technical Documentation Page</title>
+</head>
+<body>
+    <header class="top_header"><strong>C++ Documentation</strong></header>
+    <nav id="navbar">
+        <header class="bug"><strong>C++ Documentation</strong></header>
+        <header><a class="nav-link" href="#Introduction">Introduction</a></header>
+        <header><a class="nav-link" href="#Variables_and_types">Variables and types</a></header>
+        <header><a class="nav-link" href="#constants">Constants</a></header>
+        <header><a class="nav-link" href="#Operators">Operators</a></header>
+        <header><a class="nav-link" href="#Basic_Input/Output">Basic Input/Output</a></header>
+        <header><a class="nav-link" href="#Statement_and_flow_control">Statement and flow control</a></header>
+        <header><a class="nav-link" href="#Functions">Functions</a></header>
+        <header><a class="nav-link" href="#Arrays">Arrays</a></header>
+        <header><a class="nav-link" href="#Pointers">Pointers</a></header>
+        <header><a class="nav-link" href="#Data_structures">Data structures</a></header>
+    </nav>
+    <main id="main-doc">
+        <section id="Introduction" class="main-section"><header>Introduction</header><p>C++ is a popular programming language.C++ is used to create computer programs, and is one of the most used language in game development.<ul><li>The first program beginners write is a program called "Hello World", which simply prints "Hello World" to your computer screen. Although it is very simple, it contains all the fundamental components C++ programs have:</li>
+        <code class="code"><pre>// my first program in C++
+            #include <iostream>
+            
+            int main()
+            {
+              std::cout << "Hello World!";
+            }</pre></code>
+        <li>The result when the program is executed by a computer: Hello World!</li></ul></p></section>
+        <section id="Variables_and_types" class="main-section"><header>Variables and types</header><p>The usefulness of the "Hello World" programs shown in the previous chapter is rather questionable. We had to write several lines of code, compile them, and then execute the resulting program, just to obtain the result of a simple sentence written on the screen. It certainly would have been much faster to type the output sentence ourselves.
+        However, programming is not limited only to printing simple texts on the screen. In order to go a little further on and to become able to write programs that perform useful tasks that really save us work, we need to introduce the concept of variables.
+            
+        <br>Let's imagine that I ask you to remember the number 5, and then I ask you to also memorize the number 2 at the same time. You have just stored two different values in your memory (5 and 2). Now, if I ask you to add 1 to the first number I said, you should be retaining the numbers 6 (that is 5+1) and 2 in your memory. Then we could, for example, subtract these values and obtain 4 as result.
+            
+        <ul><li>The whole process described above is a simile of what a computer can do with two variables. The same process can be expressed in C++ with the following set of statements:
+        <code class="code"><pre>
+                a = 5;
+                b = 2;
+                a = a + 1;
+                result = a - b;</pre></code>
+        </li></ul>
+        Obviously, this is a very simple example, since we have only used two small integer values, but consider that your computer can store millions of numbers like these at the same time and conduct sophisticated mathematical operations with them.
+        <br>We can now define variable as a portion of memory to store a value.
+        Each variable needs a name that identifies it and distinguishes it from the others. For example, in the previous code the variable names were a, b, and result, but we could have called the variables any names we could have come up with, as long as they were valid C++ identifiers.</p></section>
+        <section id="constants" class="main-section"><header>Constants</header><p>Constants are expressions with a fixed value.
+            <ul><li><strong>Literals:</strong></li><br>Literals are the most obvious kind of constants. They are used to express particular values within the source code of a program. We have already used some in previous chapters to give specific values to variables or to express messages we wanted our programs to print out, for example, when we wrote:
+            <code class="code"><pre>a=5;</pre></code>
+            The 5 in this piece of code was a literal constant.<br>
+            <br>Literal constants can be classified into: integer, floating-point, characters, strings, Boolean, pointers, and user-defined literals.</ul>
+        </p></section>
+        <section id="Operators" class="main-section"><header>Operators</header><p>
+            Once introduced to variables and constants, we can begin to operate with them by using operators. What follows is a complete list of operators. At this point, it is likely not necessary to know all of them, but they are all listed here to also serve as reference.
+            <ul>
+                <li><strong>Assignment operator (=):</strong><br>The assignment operator assigns a value to a variable.
+                <code class="code"><pre>
+                    x=5;
+                    /*This statement assigns the integer value 5 to the variable x. The assignment operation always takes place from right to left, and never the other way around:*/
+
+                    x=y;
+                    /*This statement assigns to variable x the value contained in variable y. The value of x at the moment this statement is executed is lost and replaced by the value of y.*/
+                </pre></code></li>
+                <li><strong>Arithmetic operators ( +, -, *, /, % ):</strong><br>The five arithmetical operations supported by C++ are:
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Operator</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>+</td>
+                            <td>addition</td>
+                        </tr>
+                        <tr>
+                            <td>-</td>
+                            <td>substraction</td>
+                        </tr>
+                        <tr>
+                            <td>*</td>
+                            <td>multiplication</td>
+                        </tr>
+                        <tr>
+                            <td>/</td>
+                            <td>division</td>
+                        </tr>
+                        <tr>
+                            <td>%</td>
+                            <td>modulo</td>
+                        </tr>
+                    </tbody></table>
+                    Operations of addition, subtraction, multiplication and division correspond literally to their respective mathematical operators. The last one, modulo operator, represented by a percentage sign (%), gives the remainder of a division of two values.<br> For example:<br>	
+                    <code class="code">
+                    x = 11 % 3;
+                    </code>
+                    <br>results in variable x containing the value 2, since dividing 11 by 3 results in 3, with a remainder of 2.
+                </li>
+                <li><strong>Compound assignment (+=, -=, *=, /=, %=, >>=, <<=, &=, ^=, |=):</strong><br>Compound assignment operators modify the current value of a variable by performing an operation on it. They are equivalent to assigning the result of an operation to the first operand:
+                <br>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>expression</th>
+                            <th>equivalent to</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>y += x;</td>
+                            <td>y = y + x;</td>
+                        </tr>
+                        <tr>
+                            <td>x -= 5;</td>
+                            <td>x = x - 5;</td>
+                        </tr>
+                        <tr>
+                            <td>x /= 5;</td>
+                            <td>x = x / 5;</td>
+                        </tr>
+                        <tr>
+                            <td>y *= x + 1;</td>
+                            <td>y = y * (x + 1);</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </li>
+            </ul>
+        </p>
+        </section>
+        <section id="Basic_Input/Output" class="main-section"><header>Basic Input/Output</header><p>
+            The example programs of the previous sections provided little interaction with the user, if any at all. They simply printed simple values on screen, but the standard library provides many additional ways to interact with the user via its input/output features. This section will present a short introduction to some of the most useful.
+
+            <br>C++ uses a convenient abstraction called streams to perform input and output operations in sequential media such as the screen, the keyboard or a file. A stream is an entity where a program can either insert or extract characters to/from. There is no need to know details about the media associated to the stream or any of its internal specifications. All we need to know is that streams are a source/destination of characters, and that these characters are provided/accepted sequentially (i.e., one after another).
+
+            <br>The standard library defines a handful of stream objects that can be used to access what are considered the standard sources and destinations of characters by the environment where the program runs:
+            <br>
+            <table>
+                <thead>
+                    <th>stream</th>
+                    <th>Description</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cin</td>
+                        <td>standard input stream</td>
+                    </tr>
+                    <tr>
+                        <td>cout</td>
+                        <td>standard output stream</td>
+                    </tr>
+                    <tr>
+                        <td>cerr</td>
+                        <td>standard error(output) stream</td>
+                    </tr>
+                    <tr>
+                        <td>clog</td>
+                        <td>standard logging(output) stream</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>We are going to see in more detail only cout and cin (the standard output and input streams); cerr and clog are also output streams, so they essentially work like cout, with the only difference being that they identify streams for specific purposes: error messages and logging; which, in many cases, in most environment setups, they actually do the exact same thing: they print on screen, although they can also be individually redirected.
+            <br>
+            <code class="code"><pre>
+                cout << "Output sentence"; // prints Output sentence on screen
+                cout << 120;               // prints number 120 on screen
+                cout << x;                 // prints the value of x on screen 
+            </pre></code>
+            <br>
+            <hr>
+            <code class="code"><pre> 	
+                // i/o example
+                #include <iostream>
+                using namespace std;
+
+                int main ()
+                {
+                int i;
+                cout << "Please enter an integer value: ";
+                cin >> i;
+                cout << "The value you entered is " << i;
+                cout << " and its double is " << i*2 << ".\n";
+                return 0;
+                }
+            </pre>
+            </code>
+        </p></section>
+        <section id="Statement_and_flow_control" class="main-section"><header>Statement_and_flow_control</header><p>
+            A simple C++ statement is each of the individual instructions of a program, like the variable declarations and expressions seen in previous sections. They always end with a semicolon (;), and are executed in the same order in which they appear in a program.
+
+            <br>But programs are not limited to a linear sequence of statements. During its process, a program may repeat segments of code, or take decisions and bifurcate. For that purpose, C++ provides flow control statements that serve to specify what has to be done by our program, when, and under which circumstances.
+
+            <br>Many of the flow control statements explained in this section require a generic (sub)statement as part of its syntax. This statement may either be a simple C++ statement, -such as a single instruction, terminated with a semicolon (;) - or a compound statement. A compound statement is a group of statements (each of them terminated by its own semicolon), but all grouped together in a block, enclosed in curly braces: {}:
+
+            <br>{ statement1; statement2; statement3; }
+
+            <br>The entire block is considered a single statement (composed itself of multiple substatements). Whenever a generic statement is part of the syntax of a flow control statement, this can either be a simple statement or a compound statement.
+
+            <ul>
+                <li><strong>
+                    Selection statements: if and else:</strong>
+                <br>
+                if can specify what happens when the condition is not fulfilled, by using the else keyword to introduce an alternative statement. Its syntax is:
+
+                <br><i>if (condition) statement1 else statement2</i>
+
+                <br>where statement1 is executed in case condition is true, and in case it is not, statement2 is executed.   
+                <code class="code">
+                    <pre>
+                if (x == 100)
+                cout << "x is 100";
+                else
+                cout << "x is not 100";
+                    </pre>
+                </code> 
+            </li>
+            <li><strong>
+                Iteration statements (loops):
+            </strong>
+             <br>Loops repeat a statement a certain number of times, or while a condition is fulfilled. They are introduced by the keywords while, do, and for.
+
+             <br>The <i>while</i> loop
+             <br>The simplest kind of loop is the while-loop. Its syntax is:
+             
+             <br>while (expression) statement
+             
+             <br>The while-loop simply repeats statement while expression is true. If, after any execution of statement, expression is no longer true, the loop ends, and the program continues right after the loop. For example, let's have a look at a countdown using a while-loop:
+             <code class="code"><pre>   	
+                // custom countdown using while
+                #include <iostream>
+                using namespace std;
+
+                int main ()
+                {
+                int n = 10;
+
+                while (n>0) {
+                    cout << n << ", ";
+                    --n;
+                }
+
+                cout << "liftoff!\n";
+                }
+             </pre></code>
+
+             <br>The <i>for</i> loop:
+             <br>
+             for (initialization; condition; increase) statement;
+             
+             <br>Like the while-loop, this loop repeats statement while condition is true. But, in addition, the for loop provides specific locations to contain an initialization and an increase expression, executed before the loop begins the first time, and after each iteration, respectively. Therefore, it is especially useful to use counter variables as condition.
+             
+            <br>It works in the following way:
+             
+            <br>initialization is executed. Generally, this declares a counter variable, and sets it to some initial value. This is executed a single time, at the beginning of the loop.
+            condition is checked. If it is true, the loop continues; otherwise, the loop ends, and statement is skipped, going directly to step 5.
+            statement is executed. As usual, it can be either a single statement or a block enclosed in curly braces { }.
+            increase is executed, and the loop gets back to step 2.
+            the loop ends: execution continues by the next statement after it.
+                        
+            <br>Here is the countdown example using a for loop:
+            <code class="code">
+                <pre>
+                    // countdown using a for loop
+                    #include <iostream>
+                    using namespace std;
+
+                    int main ()
+                    {
+                    for (int n=10; n>0; n--) {
+                        cout << n << ", ";
+                    }
+                    cout << "liftoff!\n";
+                    }
+                </pre>
+            </code>
+        </li>
+            </ul>
+        </p></section>
+        <section id="Functions" class="main-section"><header>Functions</header><p>
+            <br>Functions allow to structure programs in segments of code to perform individual tasks.
+
+            <br>In C++, a function is a group of statements that is given a name, and which can be called from some point of the program. The most common syntax to define a function is:
+            
+            <br>type name ( parameter1, parameter2, ...) { statements }
+            <code class="code">
+                <pre>
+                // function example
+                #include <iostream>
+                using namespace std;
+
+                int addition (int a, int b)
+                {
+                int r;
+                r=a+b;
+                return r;
+                }
+
+                int main ()
+                {
+                int z;
+                z = addition (5,3);
+                cout << "The result is " << z;
+                }
+                </pre>
+            </code>
+        </p></section>
+        <section id="Arrays" class="main-section"><header>Arrays</header><p>
+            <br>An array is a series of elements of the same type placed in contiguous memory locations that can be individually referenced by adding an index to a unique identifier.
+
+            That means that, for example, five values of type int can be declared as an array without having to declare 5 different variables (each with its own identifier). Instead, using an array, the five int values are stored in contiguous memory locations, and all five can be accessed using the same identifier, with the proper index.
+            
+            For example, an array containing 5 integer values of type int called foo could be represented as:
+            <table>
+                <thead>
+                    <tr>
+                    <th></th>
+                    <th>0 </th>
+                    <th>1 </th>
+                    <th>2 </th>
+                    <th>3 </th>
+                    <th>4 </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>foo</strong></td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                        <td> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>code:
+            <code class="code"><pre>
+                // arrays example
+                #include <iostream>
+                using namespace std;
+
+                int foo [] = {16, 2, 77, 40, 12071};
+                int n, result=0;
+
+                int main ()
+                {
+                for ( n=0 ; n<5 ; ++n )
+                {
+                    result += foo[n];
+                }
+                cout << result;
+                return 0;
+                }
+            //>
+            </pre></code>
+        </p></section>
+        <section id="Pointers" class="main-section"><header>Pointers</header><p>
+            <br> a variable which stores the address of another variable is called a pointer. Pointers are said to "point to" the variable whose address they store.
+
+            <br>An interesting property of pointers is that they can be used to access the variable they point to directly. This is done by preceding the pointer name with the dereference operator (*). The operator itself can be read as "value pointed to by".
+            <br>The declaration of pointers follows this syntax:
+
+            <br>type * name;
+            
+            <br>where type is the data type pointed to by the pointer. This type is not the type of the pointer itself, but the type of the data the pointer points to.
+
+            <br>code:
+            <code class="code">
+                <pre>
+                        #include <iostream>
+                        using namespace std; 
+                        int main ()
+                        {
+                          int firstvalue, secondvalue;
+                          int * mypointer;
+                        
+                          mypointer = &firstvalue;
+                          *mypointer = 10;
+                          mypointer = &secondvalue;
+                          *mypointer = 20;
+                          cout << "firstvalue is " << firstvalue << '\n';
+                          cout << "secondvalue is " << secondvalue << '\n';
+                          return 0;
+                        }   
+                </pre>
+            </code>
+        </p></section>
+        <section id="Data_structures" class="main-section"><header>Data Structures</header>
+        <p>
+            <br>A data structure is a group of data elements grouped together under one name. These data elements, known as members, can have different types and different lengths. Data structures can be declared in C++ using the following syntax:
+
+            <br>struct type_name {
+            member_type1 member_name1;
+            member_type2 member_name2;
+            member_type3 member_name3;
+            .
+            .
+            } object_names;
+            
+            <br>Where type_name is a name for the structure type, object_name can be a set of valid identifiers for objects that have the type of this structure. Within braces {}, there is a list with the data members, each one is specified with a type and a valid identifier as its name.
+            <br>For example:
+            <code class="code">
+                <pre>
+                    struct product {
+                        int weight;
+                        double price;
+                      } ;
+                      
+                      product apple;
+                      product banana, melon;
+                </pre>
+            </code>
+        </p></section>
+    </main>
+</body>
+</html>

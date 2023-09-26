@@ -1,0 +1,385 @@
+* {
+    /* box-sizing: border-box; */
+    font-family: "SF Pro Text","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 62.5%;
+    /* border: 1px solid black; */
+    scroll-behavior: smooth;
+}
+
+.logo {
+    display: inline;
+    font-size: 17px;
+}
+
+#nav-bar {
+    display: flex;
+    margin: 0;
+    font-style: normal;
+    height: 44px;
+    color: #1d1d1f;
+    justify-content: center;
+    position: sticky;   
+    top: 0;
+    background-color: #fbfbfd; 
+    z-index: 100;
+}
+
+.nav-link {
+    
+    list-style: none;
+    font-size: 11px;
+    display: inline;
+    justify-content: space-evenly;
+    margin-right: 35px;
+   
+}
+
+.nav-anchor {
+    text-decoration: none;
+    font-size: 12px;
+    color: #1d1d1f;
+    transition: transform 0.3s ease;
+    
+}
+.nav-anchor:hover {
+    /* transform: scale(1.5); */
+    font-size: 12.4px;
+}
+
+main{
+    margin-top: 66px;
+    font-size: 44px;
+    position: relative;
+}
+
+h1 {
+    font-size: larger;
+    text-align: center;
+}
+
+#form {
+    font-size: 22px;
+}
+#submit{
+   background-color: black;
+   color:white;
+   border: 1px solid black;
+   border-radius: 10%;
+}
+.formdiv {
+    text-align: center;
+}
+
+h2{
+   font-weight: lighter;
+   text-align: center;
+}
+
+#home {
+    margin-top: 60px;
+    background-color: #fbfbfd;
+    align-items:center;
+}
+
+.home-img {
+   width: 500px;
+   height: 500px;
+   margin-left: 35%;
+   margin-top: 10px;
+}
+
+#Stores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap:0;
+    background-color: #f5f5f7;
+    width: 1000px;
+    height: 1500px;
+    top:0;
+    left: 0;
+    right:0;
+    bottom: 0;
+    margin:auto;
+    padding:0;
+    justify-content: center;
+    align-items: center;
+}
+.store-img {
+    border: 1px solid transparent;
+    width: 170px;
+    height: 160px;
+    max-width: 100%;
+    max-height: 100%;
+    margin-top: -120px;
+    position: absolute;
+  
+}
+
+#video {
+    display: flex;
+    margin-left: 20px;
+}
+
+.video-text {
+    font-size: 80px;
+    font-weight: bold;
+    margin: auto;   
+}
+
+
+.box {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 10%;
+    margin-left: 14px;
+    margin-top: 35px;
+    margin-bottom: 34px;
+    transition: transform 0.2s ease;
+}
+.box:hover {
+    transform: scale(1.1);
+}
+.labels{
+    /* border:1px solid black; */
+    margin-top: 140px;
+    font-size: medium;
+    text-align: center;
+   
+}
+
+
+.labels strong {
+    font-size: medium;
+    
+}
+
+.mac-heading {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#mac{
+    background-color: black;
+    width: 100vw;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+}
+
+.mac-cards {
+    width: 350px;
+    height: 700px;
+    background-color: white;
+    border: 1px solid transparent;
+    border-radius: 3%;
+    
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;    
+}
+
+.mac-img {
+    width: 130px;
+    height: 130px;
+    margin-left: 115px;
+    margin-top: 35px;
+    }
+
+.mac-labels {
+    color: #1d1d1f;
+    justify-content: center;
+    margin-left: 100px;
+    font-size: 30px;
+    text-align: center;
+}
+
+#mac p {
+    color: #1d1d1f;
+    text-align: center;
+    font-size: 14px;
+    /* border: 1px solid red; */
+
+
+}
+.m-chip {
+    font-size: 17px;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10%;
+}
+.buy-button{
+    color:white;
+    background-color: #0071e3;
+    font-size: 14px;
+    width: 50px;
+    margin-left: 150px;
+    border: 1px solid #0071e3;
+    border-radius: 980px;
+    
+}
+
+.buy-button:hover {
+    transform: scale(1.1);
+}
+
+.camera-logo {
+    margin-top: 40px;
+    margin-left: 165px;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.battery-logo{
+    margin-top: 5px;
+    margin-left: 165px;
+    font-size: 24px;
+    margin-bottom: 0;
+}
+
+.core {
+   font-size: 30px;
+   font-weight: bold;
+   margin-top: 30px;
+   padding-bottom: 0;
+}
+
+#ipad{
+    display: flex;
+}
+.ipad-img {
+    margin-left: 480px;
+    margin-top: 90px;
+    /* border: 1px solid black; */
+}
+#ipad div {
+    margin-top:380px;
+    margin-left: -170px;
+    text-align: left;
+    line-height: 1.3;
+}
+.ipad-label {
+    font-size:48px;
+    font-weight: bold;
+}
+#ipad p {
+    font-size: 17px;
+    line-height: 0%;
+}
+#ipad a {
+    margin-left: -120px;
+}
+
+
+#iphone {
+    display: flex;
+    margin-top:80px;
+}
+
+.iphone-img {
+    margin-left: 30%;
+    /* border: 1px solid black; */
+}
+
+.iphonese-motto {
+    width: 316px;
+    height: 166px;
+    font-size: 40px;
+    /* border: 1px solid black; */
+    font-weight: bold;
+    margin-top: 300px;
+    margin-left: 300px;
+    margin-right: -410px;
+    background-clip: text;
+    background-image: linear-gradient(90deg,#1e3791 0%,#2948b1 40%,#3153c6 55%,#385fda 60%);
+    color: transparent;
+}
+
+#iphone h1 {
+    font-size: larger;
+    /* border: 1px solid black; */
+    width: 181px;
+    height: 45px;
+    position: relative;
+    right: -474px;
+    top: 230px;
+   
+}
+#iphone p {
+    font-size: 17px;
+    color: black;
+    font-weight: normal;
+}
+#iphone a {
+    position: relative;
+    right:50px;
+}
+
+#watch {
+    display: flex;
+    background-color: black;
+    line-height: 0%;
+}
+
+.watch-text {
+    display: block;
+    /* border: 1px solid white; */
+    color: white;
+    height: 300px;
+    width: 300px;
+    margin-left: -300px;
+    margin-top: 320px;
+    text-align: center;
+    line-height: 0%;
+  }
+
+.watch-text i {
+    color: #fff;
+  width: 200px;
+  height: 10px;
+  font-size: 38px;
+  margin-top: 40px;
+  
+}
+
+#watch p{
+    font-size: 24px;
+    line-height: 0%;
+}
+
+#watch button {
+    position: relative;
+    left: -65px;
+    top: 20px;
+}
+
+@media only screen and (max-width: 750px) {
+  
+  .nav-anchor {
+        margin-right: 8px;
+    }
+  .home-img {
+   width: 300px;
+   height: 300px;
+   margin-left: 22%;
+   margin-top: 10px;
+   }
+   .video {
+       width:50%;
+       height:50px;
+   }
+   .video-text {
+        width:100px;
+       height:100px;
+       font-size:14px;
+   }
+
+}
+
