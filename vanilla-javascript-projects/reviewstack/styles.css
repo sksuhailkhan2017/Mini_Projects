@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:"Roboto", sans-serif;
+    box-sizing: border-box;
+}
+html , body {
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: hsl(210, 36%, 96%);
+}
+h1 {
+    margin:auto;
+    text-align: center;
+    position: relative;
+    top: 25vh;
+    font-size: 5vh;
+    color:hsl(209, 61%, 16%);
+}
+
+
+.underline {
+    margin:auto;
+    text-align: center;
+    position: relative;
+    top: 26vh;
+    background-color: hsl(205, 78%, 60%);
+    width : 20vh;
+    height: 2px;
+}
+
+.card{
+    position: relative;
+    background-color: white;
+    width:75vh;
+    height: 45vh;
+    border: 1px solid white;
+    border-radius: 2rem;
+    margin: auto;
+    top:27.5vh;
+    text-align: center;
+    box-shadow: 0 0 10px lightgrey,0 0 20px lightgrey,0 0 30px lightgrey;
+}
+
+img{
+    width: 14vh;
+    height: 14vh;
+    border-radius: 50%;
+    margin-top:2vh;
+    box-shadow: 0 0 5px lightgrey,0 0 10px lightgrey,0 0 15px lightgrey;
+}
+h2{
+    font-size: 3vh;
+}
+#job{
+    font-size: 1.7vh;
+    color:lightseagreen;
+    font-weight: 600;
+}
+#review{
+    font-size: 1.7vh;
+    text-align:center;
+    font-weight: 500;
+    padding:2vh 2vh;
+
+}
+button{
+    position:sticky;
+    background-color: white;
+    border:transparent;
+    width:3vh;
+    height: 3vh;
+    color:hsl(205, 78%, 60%);
+}
+.prev{
+   font-size: 4vh;
+}
+.next{
+  font-size: 4vh;
+}
+.random{
+    background: hsl(205, 78%, 60%);
+    color:white;
+    border: 1px solid hsl(205, 78%, 60%);
+    width: 8vh;
+    height: 3vh;
+    border-radius: 2rem;
+    margin-top:2vh;
+}

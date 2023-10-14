@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  /* outline: 1px solid white; */
+}
+
+html, body {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: url("https://picsum.photos/id/681/1920/1080");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: -1;
+}
+
+h1{
+    color:white;
+    font-size: 8vh;
+    margin: auto;
+    padding-top: 20vh;
+    text-align: center;
+    
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap:2vh;
+    padding-top:5vh;
+}
+
+.card{
+  width: 60vmin;
+  background: rgb(255,255,255,0.2);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  margin:auto;
+  font-size:2vh;
+  color:white;
+  border-radius: 2rem;
+  box-shadow: 0 0 1px rgb(255,255,255,0.3), 0 0 5px rgb(255,255,255,0.3), 0 0 15px rgb(255,255,255,0.3);
+}
+
+.ques{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2vh 2vh;
+}
+
+.ans{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:2vh 2vh;
+  display: none;
+  transition: all 0.3s linear;
+  animation:slide 0.3s 1;
+}
+
+@keyframes slide {
+  0%{
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.btn {
+  width:3vh;
+  height: 3vh;
+  margin-right: 2vh;
+  background: transparent;
+  border:transparent;
+  text-align: center;
+  display:block;
+  position: relative;
+  transition: all 0.3s linear;
+}
+
+
+
+.add{
+    background-color: transparent;
+    color:white;
+    font-size: 3vh;
+    border: transparent;
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+
+ }
+
+.sub {
+  background-color: transparent;
+  color:white;
+  font-size: 3vh;
+  border: transparent;
+  position: absolute;
+  top:0;
+  left:0;
+  text-align: center;
+  display: none;
+}
+
+.show{
+ display: block;
+}
+
+.hide{
+  display: none;
+}
+

@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:wght@400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+  /* outline: 1px solid black; */
+}
+
+html, body {
+  font-size: 62.5%;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background: url("https://picsum.photos/id/16/2500/1667");
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.agreement{
+    width:60vmin;
+    height: 30vh;
+    font-size: 2vh;
+    position: relative;
+    margin: auto;
+    top: 20vh;
+    padding:6vh 6vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.terms {
+   width: 90%;
+   margin: auto;
+   margin-top: 2vh;
+   font-size: 2vh;
+   font-weight: 600;
+   background-color:royalblue;
+   color:#fff;
+   border:1px transparent;
+   border-radius: 2rem;
+}
+
+.submit{
+    width: 100%;
+    height: 8vh;
+    margin-top:5vh;
+    margin-bottom: -4vh; 
+    padding:0;
+    font-size: 2vh;
+    font-weight: 600;
+    background-color:lightseagreen;
+    color:#fff;
+    border:1px transparent;
+    border-radius: 1rem;
+}
+
+.read{
+    width:60vh;
+    height: 30vh;
+    font-size: 2vh;
+    position: relative;
+    margin: auto;
+    top: -10vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    background-color: white;
+    border-radius: 2rem; 
+    visibility: hidden;
+    transition: all 0.1s linear;
+}
+.read h2{
+   padding:1vh 1vh;
+   font-weight: 500;
+   color:lightseagreen;
+}
+
+.exitbtn{
+    width: 3vh;
+    height: 3vh;
+    font-size: 2vh;
+    border:1px transparent;
+    border-radius: 50%;
+    background-color: gray;
+    color:#fff;
+    text-align: center;
+    position: relative;
+    left: 8vh;
+} 
+.read p{
+    padding: 1vh 2vh;
+    color:darkslategray;
+}
+
+.warningMsg{
+    font-size: 1.5vh;
+    padding: 0.5vh 0.5vh;
+    color:red;
+    visibility:hidden ;
+}
+.show {
+    visibility: visible !important;
+}
